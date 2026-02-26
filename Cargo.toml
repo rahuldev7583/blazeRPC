@@ -10,6 +10,7 @@ members = [
     "banks-interface",
     "banks-server",
     "bench-streamer",
+    "blaze_rpc",
     "bloom",
     "bls-cert-verify",
     "bls12-381",

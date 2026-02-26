@@ -1,0 +1,35 @@
+[package]
+name = "blaze_rpc"
+version.workspace = true
+authors.workspace = true
+description.workspace = true
+repository.workspace = true
+homepage.workspace = true
+license.workspace = true
+edition.workspace = true
+
+[lib]
+name ="blaze_rpc"
+path="./src/lib.rs"
+
+[[bin]]
+name="blaze_rpc"
+path="./src/bin/main.rs"
+
+[dependencies]
+dashmap = "6.1"
+anyhow = "1.0"
+thiserror = "2.0.18"
+log = "0.4"
+env_logger = "0.11"
+
+tokio = { version = "1.40", features = ["full", "rt-multi-thread"] }
+jsonrpsee = { version = "0.26.0", features = ["server", "http-client", "macros"] }
+
+shaq = { git = "https://github.com/anza-xyz/shaq", branch = "main" }
+rts-alloc = { git = "https://github.com/anza-xyz/rts-alloc", branch = "main" }
+
+
+[lints]
+workspace = true
+
